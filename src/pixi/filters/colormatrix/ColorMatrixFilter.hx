@@ -82,7 +82,7 @@ extern class ColorMatrixFilter extends Filter {
 	 * @param amount {Float}
 	 * @param multiply {Bool} refer to ._loadMatrix() method
 	 */
-	function saturation(amount:Float, multiply:Bool):Void;
+	function saturate(amount:Float, multiply:Bool):Void;
 
 	/**
 	 * Desaturate image (remove color)

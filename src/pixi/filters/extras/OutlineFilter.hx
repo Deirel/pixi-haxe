@@ -1,7 +1,9 @@
 package pixi.filters.extras;
 
+import pixi.core.renderers.webgl.filters.Filter;
+
 @:native("PIXI.filters.OutlineFilter")
-extern class OutlineFilter {
+extern class OutlineFilter extends Filter {
 
 	/**
 	 * OutlineFilter, originally by mishaa
@@ -15,7 +17,11 @@ extern class OutlineFilter {
 	 * @example
 	 *  someSprite.shader = new OutlineFilter(9, 0xFF0000);
 	 */
-	function new(thickness:Float, color:Int);
+	function new(thickness:Float = 1.0, color:Int = 0x000000, quality:Float = 0.1);
 
 	var color:Array<Int>;
+
+	var quality:Float;
+
+	var thickness:Float;
 }

@@ -8,7 +8,7 @@ import pixi.interaction.InteractiveTarget;
 import haxe.extern.EitherType;
 
 @:native("PIXI.DisplayObject")
-extern class DisplayObject extends InteractiveTarget {
+extern class DisplayObject extends InteractiveTarget implements Dynamic<DisplayObject> implements ArrayAccess<DisplayObject> {
 
 	/**
 	 * The base class for all objects that are rendered on the screen.
@@ -100,7 +100,8 @@ extern class DisplayObject extends InteractiveTarget {
      * @param {boolean} [options.baseTexture=false] - Only used for child Sprites if options.children is set to true
      *  Should it destroy the base texture of the child sprite
      */
-	function destroy(?options:EitherType<Bool, DestroyOptions>):Void;
+	@:overload(function(?options:EitherType<Bool, DestroyOptions>):Void {})
+	function destroy():Void;
 
 	/**
 	 * The instance name of the object.
