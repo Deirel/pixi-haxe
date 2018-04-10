@@ -56,6 +56,8 @@ extern class Sprite extends Container {
 	 */
 	var tint:Int;
 
+	var tintOffset:Int;
+
 	/**
 	 * The blend mode to be applied to the sprite. Set to CONST.blendModes.NORMAL to remove any blend mode.
 	 *
